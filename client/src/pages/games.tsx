@@ -447,7 +447,7 @@ export default function Games() {
                               {game.title}
                             </h3>
                             {isRecommended && (
-                              <Target className="w-4 h-4 text-primary" title="Recommended for your mood" />
+                              <Target className="w-4 h-4 text-primary" />
                             )}
                           </div>
                           <p className="text-gray-600">

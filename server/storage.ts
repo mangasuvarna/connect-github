@@ -154,6 +154,8 @@ export class MemStorage implements IStorage {
     const newMoodData: MoodData = {
       id,
       ...data,
+      notes: data.notes ?? null,
+      entryId: data.entryId ?? null,
       createdAt: new Date(),
     };
     this.moodData.set(id, newMoodData);
@@ -184,9 +186,11 @@ export class MemStorage implements IStorage {
       throw new Error("User progress not initialized");
     }
     
-    if (!this.userProgress.badges.includes(badge)) {
-      this.userProgress.badges.push(badge);
-      this.userProgress.updatedAt = new Date();
+    const userProgress = this.userProgress;
+    if (!userProgress.badges?.includes(badge)) {
+      userProgress.badges = userProgress.badges || [];
+      userProgress.badges.push(badge);
+      userProgress.updatedAt = new Date();
     }
     
     return this.userProgress;
@@ -236,9 +240,11 @@ export class MemStorage implements IStorage {
     }
     
     // Add badges that aren't already awarded
+    const userProgress = this.userProgress;
     badges.forEach(badge => {
-      if (!this.userProgress!.badges.includes(badge)) {
-        this.userProgress!.badges.push(badge);
+      if (!userProgress.badges?.includes(badge)) {
+        userProgress.badges = userProgress.badges || [];
+        userProgress.badges.push(badge);
       }
     });
   }

@@ -10,7 +10,7 @@ import MusicPlayer from "@/components/music-player";
 import AuraCircle from "@/components/aura-circle";
 import { useMood } from "@/hooks/use-mood";
 import { 
-  Music, 
+  Music as MusicIcon, 
   Search, 
   Play, 
   ExternalLink, 
@@ -107,7 +107,7 @@ export default function Music() {
                   size="md" 
                   intensity={moodState.intensity}
                 >
-                  <Music className="w-6 h-6 text-white" />
+                  <MusicIcon className="w-6 h-6 text-white" />
                 </AuraCircle>
                 <div className="text-left">
                   <p className="text-sm text-gray-600">Your Current Mood</p>
@@ -335,7 +335,7 @@ export default function Music() {
                   <p className="text-sm">Calming melodies lower cortisol and anxiety levels</p>
                 </div>
                 <div className="text-center space-y-2">
-                  <Music className="w-8 h-8 mx-auto text-green-500" />
+                  <MusicIcon className="w-8 h-8 mx-auto text-green-500" />
                   <h4 className="font-medium text-gray-800">Mood Enhancement</h4>
                   <p className="text-sm">Upbeat music releases endorphins and dopamine</p>
                 </div>
