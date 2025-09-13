@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(240, 10%, 98%);
+  --foreground: hsl(240, 10%, 9%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(240, 10%, 9%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(240, 10%, 9%);
+  --primary: hsl(264, 67%, 85%);
+  --primary-foreground: hsl(240, 10%, 9%);
+  --secondary: hsl(182, 100%, 85%);
+  --secondary-foreground: hsl(240, 10%, 9%);
+  --muted: hsl(264, 30%, 96%);
+  --muted-foreground: hsl(240, 3.8%, 46.1%);
+  --accent: hsl(339, 85%, 85%);
+  --accent-foreground: hsl(240, 10%, 9%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --border: hsl(264, 20%, 90%);
+  --input: hsl(264, 20%, 90%);
+  --ring: hsl(264, 67%, 85%);
+  --sidebar-background: hsl(0, 0%, 100%);
+  --sidebar-foreground: hsl(240, 10%, 9%);
+  --sidebar-primary: hsl(264, 67%, 85%);
+  --sidebar-primary-foreground: hsl(240, 10%, 9%);
+  --sidebar-accent: hsl(264, 30%, 96%);
+  --sidebar-accent-foreground: hsl(264, 67%, 85%);
+  --sidebar-border: hsl(264, 20%, 90%);
+  --sidebar-ring: hsl(264, 67%, 85%);
+  --chart-1: hsl(264, 67%, 85%);
+  --chart-2: hsl(182, 100%, 85%);
+  --chart-3: hsl(339, 85%, 85%);
+  --chart-4: hsl(120, 50%, 85%);
+  --chart-5: hsl(60, 90%, 85%);
+  --font-sans: 'Inter', 'Poppins', system-ui, sans-serif;
+  --font-serif: Georgia, serif;
+  --font-mono: Menlo, monospace;
+  --radius: 0.75rem;
+  
+  /* Aurora gradient colors */
+  --aurora-lavender: hsl(264, 67%, 85%);
+  --aurora-sky-blue: hsl(182, 100%, 85%);
+  --aurora-blush-pink: hsl(339, 85%, 85%);
+  
+  /* Dark aurora colors */
+  --dark-navy: hsl(234, 41%, 12%);
+  --glow-teal: hsl(182, 100%, 70%);
+  --glow-purple: hsl(264, 67%, 70%);
+}
+
+.dark {
+  --background: hsl(234, 41%, 12%);
+  --foreground: hsl(0, 0%, 85%);
+  --card: hsl(234, 30%, 15%);
+  --card-foreground: hsl(0, 0%, 85%);
+  --popover: hsl(234, 41%, 12%);
+  --popover-foreground: hsl(0, 0%, 85%);
+  --primary: hsl(264, 67%, 70%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(182, 100%, 70%);
+  --secondary-foreground: hsl(234, 41%, 12%);
+  --muted: hsl(234, 30%, 20%);
+  --muted-foreground: hsl(240, 3.8%, 60%);
+  --accent: hsl(339, 85%, 70%);
+  --accent-foreground: hsl(0, 0%, 100%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --border: hsl(234, 30%, 25%);
+  --input: hsl(234, 30%, 25%);
+  --ring: hsl(264, 67%, 70%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+}
+
+@layer components {
+  /* Aurora gradient backgrounds */
+  .aurora-gradient {
+    background: linear-gradient(135deg, var(--aurora-lavender) 0%, var(--aurora-sky-blue) 50%, var(--aurora-blush-pink) 100%);
+  }
+  
+  .dark-aurora {
+    background: linear-gradient(135deg, var(--dark-navy) 0%, hsl(234, 30%, 20%) 50%, var(--dark-navy) 100%);
+  }
+  
+  /* Glass effect cards */
+  .glass-card {
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  }
+  
+  .glass-card-dark {
+    backdrop-filter: blur(10px);
+    background: rgba(26, 26, 46, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Glow effects */
+  .glow-effect {
+    box-shadow: 0 0 20px rgba(167, 122, 234, 0.3);
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .glow-effect:hover {
+    box-shadow: 0 0 30px rgba(167, 122, 234, 0.5);
+  }
+  
+  .aura-glow {
+    box-shadow: 0 0 30px var(--glow-teal), 0 0 60px var(--glow-purple);
+  }
+  
+  /* Navbar blur effect */
+  .navbar-blur {
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.8);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  /* Mood colors */
+  .mood-positive { 
+    background: linear-gradient(135deg, hsl(132, 43%, 70%) 0%, hsl(182, 100%, 75%) 100%);
+    color: white;
+  }
+  
+  .mood-neutral { 
+    background: linear-gradient(135deg, hsl(45, 93%, 75%) 0%, hsl(39, 85%, 70%) 100%);
+    color: white;
+  }
+  
+  .mood-negative { 
+    background: linear-gradient(135deg, hsl(339, 85%, 75%) 0%, hsl(25, 95%, 70%) 100%);
+    color: white;
+  }
+  
+  /* Aura animations */
+  .aura-circle {
+    animation: aura-pulse 3s ease-in-out infinite;
+  }
+  
+  .breathing-animation {
+    animation: breathe 4s ease-in-out infinite;
+  }
+  
+  /* Custom scrollbar */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 10px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-foreground);
+  }
+}
+
+@layer utilities {
+  /* Page transitions */
+  .page-transition {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  
+  .page-active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Keyframe animations */
+@keyframes aura-pulse {
+  0%, 100% { 
+    transform: scale(1); 
+    opacity: 0.7; 
+  }
+  50% { 
+    transform: scale(1.1); 
+    opacity: 1; 
+  }
+}
+
+@keyframes breathe {
+  0%, 100% { 
+    transform: scale(1); 
+  }
+  50% { 
+    transform: scale(1.1); 
+  }
+}
+
+@keyframes gentle-glow {
+  0% { 
+    box-shadow: 0 0 10px rgba(132, 250, 176, 0.3); 
+  }
+  50% { 
+    box-shadow: 0 0 20px rgba(132, 250, 176, 0.6); 
+  }
+  100% { 
+    box-shadow: 0 0 10px rgba(132, 250, 176, 0.3); 
+  }
+}
+
+@keyframes float {
+  0%, 100% { 
+    transform: translateY(0px); 
+  }
+  50% { 
+    transform: translateY(-10px); 
+  }
+}
+
+/* Text gradients */
+.text-gradient-aurora {
+  background: linear-gradient(135deg, var(--aurora-lavender), var(--aurora-sky-blue), var(--aurora-blush-pink));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Loading animations */
+.loading-shimmer {
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Music player styles */
+.music-progress {
+  background: linear-gradient(to right, var(--primary) 0%, var(--primary) var(--progress, 0%), rgba(255, 255, 255, 0.3) var(--progress, 0%), rgba(255, 255, 255, 0.3) 100%);
+}
+
+/* Doodle canvas styles */
+.doodle-canvas {
+  cursor: crosshair;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Calendar mood colors */
+.calendar-day-happy {
+  background: linear-gradient(135deg, hsl(132, 43%, 80%), hsl(182, 100%, 85%));
+}
+
+.calendar-day-sad {
+  background: linear-gradient(135deg, hsl(339, 85%, 80%), hsl(25, 95%, 80%));
+}
+
+.calendar-day-neutral {
+  background: linear-gradient(135deg, hsl(45, 93%, 80%), hsl(39, 85%, 80%));
+}
+
+.calendar-day-anxious {
+  background: linear-gradient(135deg, hsl(264, 67%, 80%), hsl(240, 60%, 80%));
+}
+
+.calendar-day-excited {
+  background: linear-gradient(135deg, hsl(60, 90%, 80%), hsl(39, 85%, 80%));
+}
+
+.calendar-day-calm {
+  background: linear-gradient(135deg, hsl(182, 100%, 80%), hsl(264, 67%, 80%));
+}
+
+.calendar-day-angry {
+  background: linear-gradient(135deg, hsl(0, 84%, 80%), hsl(25, 95%, 80%));
+}
