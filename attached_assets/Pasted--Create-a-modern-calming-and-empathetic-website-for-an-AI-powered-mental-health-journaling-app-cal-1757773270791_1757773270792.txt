@@ -1,0 +1,122 @@
+“Create a modern, calming, and empathetic website for an AI-powered mental health journaling app called SoulScript, using an Aurora Gradient theme with gradients of lavender (#C7CEEA) → sky blue (#A7FFEB) → blush pink (#FFB7B2) on light sections, and deep navy (#1A1A2E) with glowing teal/purple accents on dark sections. Design must feel refreshing, private, and supportive.
+
+Navbar
+
+Left: Logo (open journal + aura wave) + ‘SoulScript’.
+
+Right: Links → Dashboard | Journal | Calendar & Graph.
+
+Transparent with slight blur, hover effects in gradient glow.
+
+Homepage (Landing)
+
+Hero Section:
+
+Left: Tagline in 3 lines:
+
+Track your feelings.  
+Discover patterns.  
+Heal yourself.  
+
+
+Subline: “Your private AI-powered journaling companion.”
+Call-to-action button: Start Journaling (gradient glow).
+
+Right: Illustration of a person journaling with glowing aura waves.
+
+Mission / Vision / Values: 3 cards with soft pastel gradients.
+
+Features Section: Rounded cards with icons for:
+
+AI-powered sentiment analysis
+
+Mood calendar & graph visualization
+
+Personalized prompts
+
+Privacy & encryption
+
+Motivational streaks & badges
+
+Aura visualization that grows/shrinks with mood
+
+Preview Sections:
+
+Dashboard Preview with mock graph and stats.
+
+Journal Preview with clean text box and save button.
+
+Calendar Preview with colorful mood chart.
+
+Footer: Navy background, soft glow links for Contact, Privacy, Mental Health Resources.
+
+Dashboard Page
+
+Background: Navy with glowing aurora gradient accents.
+
+Aura Meter → glowing circle that expands/shrinks based on overall sentiment.
+
+Mood Trend Graph → Line chart (purple-teal glow line).
+
+Quick Stats Cards → Most frequent mood, Positive streak, Entries this week.
+
+Badges Showcase:
+
+🌱 First Entry
+
+🔥 Streak Keeper
+
+🌟 Positivity
+
+💎 Resilience
+
+🕊 Calm Mind
+Each badge = colorful flat icon with aura glow border.
+
+AI Suggestions Section:
+
+🎵 Music Recommendations (Spotify/YT embed) based on mood.
+
+🎮 Mental health mini-games → doodle/scribble pad, breathing animation, puzzle.
+
+Journal Page
+
+Light aurora gradient background (lavender → pink → blue).
+
+Large text box with soft shadow and rounded edges.
+
+Optional mood emoji selector under the box.
+
+Save button → gradient glow.
+
+Aura Response → glowing aura animation brightens/dims when entry saved.
+
+AI Prompt Suggestions shown after entry is saved.
+
+Calendar & Graph Page
+
+Calendar grid → days filled with mood colors (green=positive, yellow=neutral, red=negative).
+
+Line chart for mood trends over time.
+
+Pie chart for mood distribution.
+
+Insights panel with AI-written takeaways:
+
+“Most negative day: Monday.”
+
+“Mood improves with >7 hrs sleep.”
+
+“Your most positive entries mention ‘friends’.”
+
+Theme & Visuals
+
+Aurora Gradient backgrounds (lavender → sky blue → blush pink).
+
+Dark navy for dashboards with glowing purple/teal accents.
+
+Soft shadows, rounded cards, minimal typography (Poppins/Inter).
+
+Aura animations for mood representation.
+
+Empathetic, soothing, and futuristic aesthetic.”
